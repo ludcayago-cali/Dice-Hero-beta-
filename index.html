@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Dice Tactics Prototype</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <section id="menuScreen" class="screen active">
+      <div class="titleBlock">
+        <h1>Dice Tactics</h1>
+        <p>Story • Bot Battle • Lobby Prototype</p>
+      </div>
+      <div class="menuPanel">
+        <button data-action="story">Story Mode</button>
+        <button data-action="bot">Play with Bot</button>
+        <button data-action="create">Create Game</button>
+        <div class="joinBox">
+          <input id="joinCodeInput" maxlength="5" placeholder="Enter Code" />
+          <button data-action="join">Join Game</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="lobbyScreen" class="screen">
+      <div class="panel narrow">
+        <h2>Game Lobby</h2>
+        <p>Code: <strong id="lobbyCode">-----</strong></p>
+        <p id="lobbyStatus">Waiting for opponent...</p>
+        <button id="simulateJoinBtn">Simulate Opponent Join</button>
+        <button id="lobbyBotBtn">Play with Bot</button>
+        <button id="backMenuBtn">Back to Menu</button>
+      </div>
+    </section>
+
+    <section id="characterScreen" class="screen">
+      <div class="charHeader">
+        <h2 id="charModeTitle">Character Selection</h2>
+        <p>Select exactly 2 characters. Choose exactly 2 unlocked skills per character.</p>
+      </div>
+      <div class="charLayout">
+        <div id="characterList" class="characterList"></div>
+        <div id="skillPanel" class="skillPanel">
+          <h3>Select a character</h3>
+          <div id="skillContent"></div>
+        </div>
+      </div>
+      <div class="charFooter">
+        <div id="selectedSummary">Selected: 0 / 2</div>
+        <button id="startBattleBtn" disabled>Start Battle</button>
+        <button id="charBackBtn">Back</button>
+      </div>
+    </section>
+
+    <section id="battleScreen" class="screen">
+      <div id="hud">
+        <div class="hudGroup">
+          <strong id="modeLabel">Bot Battle</strong>
+          <span id="turnLabel">Player Turn</span>
+          <span id="storyLabel"></span>
+        </div>
+        <div class="hudGroup">
+          <button id="rollBtn">Roll Dice</button>
+          <div id="diceBox">-</div>
+          <button id="endTurnBtn">End Turn</button>
+          <button id="returnLobbyBtn">Exit</button>
+        </div>
+      </div>
+      <div id="battleLayout">
+        <div id="boardWrap">
+          <div id="board"></div>
+        </div>
+        <aside id="rightPanel">
+          <h3>Game Log</h3>
+          <div id="unitStatus"></div>
+          <div id="gameLog"></div>
+        </aside>
+      </div>
+      <div id="actionPanel" class="hidden"></div>
+    </section>
+
+    <section id="resultScreen" class="screen">
+      <div class="panel narrow">
+        <h2 id="resultTitle">Result</h2>
+        <p id="resultText"></p>
+        <button id="nextBtn">Continue</button>
+        <button id="resultMenuBtn">Main Menu</button>
+      </div>
+    </section>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
