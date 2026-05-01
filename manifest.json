@@ -1,17 +1,23 @@
 {
   "name": "Dice Tactics",
-  "short_name": "DiceTactics",
-  "description": "Turn-based tactical dice battle game",
+  "short_name": "Dice Tactics",
+  "start_url": "/index.html",
   "display": "fullscreen",
-  "orientation": "landscape",
-  "start_url": "index.html",
-  "background_color": "#0d1520",
-  "theme_color": "#0d1520",
+  "orientation": "portrait",
+  "background_color": "#0e0d0b",
+  "theme_color": "#0e0d0b",
   "icons": [
     {
-      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect width='192' height='192' fill='%230d1520'/><text y='140' font-size='130' text-anchor='middle' x='96'>🎲</text></svg>",
+      "src": "icon-192.png",
       "sizes": "192x192",
-      "type": "image/svg+xml"
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }
